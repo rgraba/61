@@ -4,7 +4,6 @@ import java.util.Scanner;
 class WrongStudentName extends Exception { }
 class WrongAge extends Exception { }
 
-
 class Main {
     public static Scanner scan = new Scanner(System.in);
 
@@ -16,19 +15,19 @@ class Main {
                     case 1: exercise1(); break;
                     case 2: exercise2(); break;
                     case 3: exercise3(); break;
-                    default: return;
+                    default: return; 
                 }
             } catch(IOException e) {
 
             } catch(WrongStudentName e) {
                 System.out.println("Błędne imie studenta!");
             } catch(WrongAge e) {
-                System.out.println("Błąd!");;
+                System.out.println("Błąd!");
             }
             }
-        }
-    
+            }
 
+    
     public static int menu() {
         System.out.println("Wciśnij:");
         System.out.println("1 - aby dodać studenta");
@@ -55,6 +54,7 @@ class Main {
         scan.nextLine();
         if(age > 100 || age < 1)
         throw new WrongAge();
+        System.out.println("Podaj datę urodzenia DD-MM-YYYY");
         var date = scan.nextLine();
         (new Service()).addStudent(new Student(name, age, date));
       

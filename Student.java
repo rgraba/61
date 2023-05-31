@@ -9,7 +9,7 @@ public class Student {
         Age = age;
         Date = date;
     }
-
+  
     public String GetName() {return Name;}
     public int GetAge() {return Age;}
     public String GetDate() {return Date;}
